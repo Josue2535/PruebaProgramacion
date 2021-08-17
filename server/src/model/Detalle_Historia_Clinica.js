@@ -1,17 +1,17 @@
-const {Schema,model} = require('mongoose')
+const {Schema,model, Mongoose, mongo} = require('mongoose')
 
 const Detalle_Historia_Clinica = new Schema({
-  _id: {type: Number,require:true, require},
+  
   temperatura: {type: String,require:true} ,
   peso: {type: Number,require: true},
   frecuencia_cardiaca: {type: Number,require: true},
   frecuencia_respiratoria: {type: Number,require: true},
-  fecha_hora: {type: timestamps,require: true},
-  alimentacion:{type: Number,require: true},
+  fecha_hora: {type: String,require: true},
+  alimentacion:{type: String,require: true},
   habitad:{type: String, require:true},
-  observacion:{},
-  colaborador_id:{},
-  historia_clinica_id:{}
+  observacion:{type: String, require:true},
+  colaborador_id:{type:Schema.Types.ObjectId, require:true},
+  historia_clinica_id:{type:Schema.Types.ObjectId, require:true}
 },{
   timestamps: true,
   versionKey: false

@@ -1,9 +1,9 @@
 const {Schema,model} = require('mongoose')
 
 const Historia_Clinica = new Schema({
-  _id: {type: Number,require:true, require},
-  mascota_id: {type: number,require:true} ,
-  fecha_creacion: {type: Date,require: true},
+  
+  mascota_id: {type: Schema.Types.ObjectId,require:true} ,
+  fecha_creacion: {type:Date,require: true},
 },{
   timestamps: true,
   versionKey: false

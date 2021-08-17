@@ -1,0 +1,91 @@
+###
+GET   HTTP://localhost:3000/api/user
+
+###
+POST HTTP://localhost:3000/api/user
+Content-Type: application/json
+
+{
+   "nombre": "josue",
+   "apellido": "rodriguez",
+   "tipo_documento":"CC",
+   "estado": "SOLTERO",
+   "sexo": 1
+}
+
+###
+GET   HTTP://localhost:3000/api/user/611bcd6eca324951e8a98351
+
+###
+DELETE HTTP://localhost:3000/api/user/611bca5311887473f81f86bd
+
+###
+PUT HTTP://localhost:3000/api/user/611bcd6eca324951e8a98351
+Content-Type: application/json
+
+{
+    "estado": "casado"
+}
+//Mascota
+###
+GET   HTTP://localhost:3000/api/mascota
+
+###
+POST HTTP://localhost:3000/api/mascota
+Content-Type: application/json
+
+{
+   "nombre": "Luna",
+   "raza": "gato",
+   "usuario_id":"611bcd6eca324951e8a98351",
+   "sexo": 0
+}
+
+//Historia
+###
+GET   HTTP://localhost:3000/api/historia
+
+###
+POST HTTP://localhost:3000/api/historia
+Content-Type: application/json
+
+{
+   "mascota_id": "611bfd0881469174d4c70579",
+   "fecha_creacion": "2014-01-22T14:56:59.301Z"
+}
+//Colaborador
+###
+GET   HTTP://localhost:3000/api/colaborador
+
+###
+POST HTTP://localhost:3000/api/colaborador
+Content-Type: application/json
+
+{
+   "nombre": "Gised",
+   "apellido": "Barragan",
+   "cargo":"veterinaria",
+   "especialidad": 0,
+   "tipo_documento": "CC",
+   "documento_identificacion": 10059696243
+}
+//detalle
+###
+GET   HTTP://localhost:3000/api/detalle
+
+###
+POST HTTP://localhost:3000/api/detalle
+Content-Type: application/json
+
+{
+   "temperatura": "80°c",
+   "peso": 20,
+   "frecuencia_cardiaca":200,
+   "frecuencia_respiratoria": 0,
+   "fecha_hora": "2021-08-17T14:56:59.301Z",
+   "alimentacion": "Pez",
+    "habitad":"veterinaria",
+   "observacion": "Mejorando",
+   "colaborador_id": "611c0826eca525565ca418ce",
+   "historia_clinica_id": "611c075508bd565cac8d98a4"
+}
