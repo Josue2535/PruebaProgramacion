@@ -1,0 +1,70 @@
+<div class="row">
+    <div class="col-md-4">
+        <div class="card-body">
+            <form #historiaForm= "ngForm" (ngSubmit)="addHistoria(historiaForm)" >
+                <div>
+                    <input type="text" class = "form-control" placeholder="Mascota ID" name="mascotaId" [(ngModel)]= "historiaService.historiaN.mascota_id">
+                </div>
+                <div>
+                    <input type="date" class = "form-control" placeholder="fecha creacion" name="fecha"[(ngModel)]= "historiaService.historiaN.f">
+                </div>
+
+                <button>
+                    save
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <table class = "table table-striped">
+            <thead>
+                <tr>
+                    <th>Mascota id</th>
+                    <th> fecha cracion</th>
+                    <th> operacion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let Historia of historiaService.historias">
+                    <td>
+                        {{Historia.mascota_id}}
+                    </td>
+                    <td>
+                        {{Historia.fecha_creacion}}
+                    </td>
+                    <button class= "btn btn-secundary">edit</button>
+                    <button class= "btn btn-danger">eliminar</button>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card-body">
+            <h1>Detalles Historia Clinica</h1>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <table class = "table table-striped">
+            <thead>
+                <tr>
+                    <th>Temperatura</th>
+                    <th>Peso</th>
+                    <th>Frecuencia Cardiaca</th>
+                    <th>Frecuancia Respiratoria</th>
+                    <th>Fecha Hora</th>
+                    <th>Alimentacion</th>
+                    <th>Habitad</th>
+                    <th>Observacion</th>
+                    <th>Colaborador id</th>
+                    <th>Historia Clinica id</th>
+                    <th> operacion</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+</div>

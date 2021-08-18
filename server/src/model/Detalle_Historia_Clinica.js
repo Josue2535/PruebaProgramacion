@@ -6,7 +6,7 @@ const Detalle_Historia_Clinica = new Schema({
   peso: {type: Number,require: true},
   frecuencia_cardiaca: {type: Number,require: true},
   frecuencia_respiratoria: {type: Number,require: true},
-  fecha_hora: {type: String,require: true},
+  fecha_hora: {type: Date,require: true},
   alimentacion:{type: String,require: true},
   habitad:{type: String, require:true},
   observacion:{type: String, require:true},
